@@ -1,4 +1,4 @@
 package com.AppLink.app.error;
 
-public class Error {
+public class ErrorController {
 }

@@ -1,4 +1,4 @@
 package com.AppLink.app.urlcontroller;
 
-public class Ucontr {
+public class LinksController {
 }
