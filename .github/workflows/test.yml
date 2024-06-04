@@ -1,0 +1,25 @@
+name: Run test
+env:
+  APP_PROFILE: 'test'
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Or your desired runner
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17 (or your desired version)
+        uses: actions/setup-java@v3
+        with:
+          java-version: 21
+          distribution: 'adopt'
+      - name: Build project with test profile
+        uses: gradle/gradle-build-action@v2
+        with:
+          gradle-version: 8.4
+          tasks: ':test'
+          arguments: '-Ptest'  # Optional, depending on profile activation
