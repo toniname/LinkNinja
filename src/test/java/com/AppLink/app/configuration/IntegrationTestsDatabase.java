@@ -1,4 +1,4 @@
-package com.applink.app.configuration;
+package com.AppLink.app.configuration;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -14,12 +14,11 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 @SpringBootTest
 @Testcontainers
 @DirtiesContext
-@PropertySource("classpath:application.properties")
+@PropertySource("classpath:application-test.properties")
 public abstract class IntegrationTestsDatabase {
 
     @Container
-    private static final PostgreSQLContainer<?> container = new
-            PostgreSQLContainer<>("postgres:16")
+    private static final PostgreSQLContainer<?> container = new PostgreSQLContainer<>("postgres:16")
             .withUsername("postgres")
             .withPassword("postgres");
 
