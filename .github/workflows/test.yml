@@ -25,4 +25,6 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Execute Gradle command - testDebugUnitTest
-        run: ./gradlew test
+        run: |
+          echo "APP_PROFILES=test" >> $GITHUB_ENV  # Add environment variable
+          ./gradlew test
