@@ -8,3 +8,4 @@ unset DATASOURCE_PASSWORD
 unset JWT_TOKEN
 
 echo "Змінні середовища видалені."
+

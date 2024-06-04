@@ -37,7 +37,6 @@ public abstract class IntegrationTestsDatabase {
         registry.add("spring.flyway.url", container::getJdbcUrl);
     }
 
-
     @AfterAll
     public static void stopContainer() {
         container.stop();

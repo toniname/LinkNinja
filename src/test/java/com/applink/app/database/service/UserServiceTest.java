@@ -36,5 +36,4 @@ public class UserServiceTest extends IntegrationTestsDatabase {
                 () -> {userService.getUserByUsername("username");});
     }
 
-
 }

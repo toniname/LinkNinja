@@ -4,4 +4,5 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController("registrationController")
 public class RegistrationController {
+
 }

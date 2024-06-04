@@ -53,4 +53,5 @@ public class UserEntity implements UserDetails {
         USER,
         ADMIN
     }
+
 }

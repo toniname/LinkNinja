@@ -33,4 +33,5 @@ public class UrlEntity {
     private LocalDateTime createdAt;
     @Column(name = "expired_at")
     private LocalDateTime expiredAt;
+
 }

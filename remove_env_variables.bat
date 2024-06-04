@@ -7,4 +7,5 @@ set "DATASOURCE_USERNAME="
 set "DATASOURCE_PASSWORD="
 set "JWT_TOKEN="
 
+
 echo Змінні середовища видалені.

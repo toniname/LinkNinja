@@ -17,6 +17,7 @@ public class JwtService {
     @Value(value = "${jjwt.token}")
     private String secretKey;
 
+
     public String generateToken(UserDetails userDetails) {
         return Jwts.builder()
                 .subject(userDetails.getUsername())
