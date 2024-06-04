@@ -21,3 +21,5 @@ jobs:
           cache: gradle
       - name: Build with Gradle
         run: ./gradlew build
+        env:
+          APP_PROFILE: 'test'

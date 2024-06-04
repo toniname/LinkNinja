@@ -26,5 +26,5 @@ jobs:
 
       - name: Execute Gradle command - testDebugUnitTest
         run: |
-          echo "APP_PROFILE=test" >> $GITHUB_ENV  # Add environment variable
+          echo "APP_PROFILE=test" >> $GITHUB_ENV
           ./gradlew test
