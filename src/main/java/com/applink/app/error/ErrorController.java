@@ -1,7 +1,4 @@
-package com.applink.app.error;
+package com.AppLink.app.error;
 
-import org.springframework.web.bind.annotation.RestController;
-
-@RestController("errorController")
 public class ErrorController {
 }
