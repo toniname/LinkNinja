@@ -1,5 +1,7 @@
 name: Build project
 command: chmod +x ./gradlew
+env:
+    APP_PROFILE: 'test'
 on:
   push:
     branches: [ master ]
@@ -19,5 +21,3 @@ jobs:
           cache: gradle
       - name: Build with Gradle
         run: ./gradlew build
-        env:
-          APP_PROFILE: 'test'
