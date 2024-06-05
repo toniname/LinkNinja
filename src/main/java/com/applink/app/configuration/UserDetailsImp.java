@@ -1,4 +1,4 @@
-package com.applink.app.configuration.security;
+package com.applink.app.configuration;
 
 import com.applink.app.database.service.UserService;
 import lombok.RequiredArgsConstructor;
