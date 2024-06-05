@@ -18,7 +18,9 @@ public abstract class IntegrationTestsDatabase {
     // PostgreSQL container
     // docker image 16.2, because postgres:latest can be a source of unstable work and exceptions
     @Container
-    private static final PostgreSQLContainer<?> container = new PostgreSQLContainer<>("postgres:16.2");
+    private static final PostgreSQLContainer<?> container = new PostgreSQLContainer<>("postgres:16.2")
+            .withUsername("postgres")
+            .withPassword("postgres");
 
     @BeforeAll
     public static void runContainer() {

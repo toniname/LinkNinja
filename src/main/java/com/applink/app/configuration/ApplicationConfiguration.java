@@ -1,8 +1,6 @@
 package com.applink.app.configuration;
 
-import com.applink.app.configuration.security.JwtFilter;
 import lombok.RequiredArgsConstructor;
-import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+
 
 import java.time.LocalDateTime;
 
@@ -30,8 +32,10 @@ public class UrlEntity {
     @Column(name = "visited")
     private long visited;
     @Column(name = "created_at")
-    private LocalDateTime createdAt;
+    @Builder.Default
+    private LocalDateTime createdAt = LocalDateTime.now();
     @Column(name = "expired_at")
-    private LocalDateTime expiredAt;
+    @Builder.Default
+    private LocalDateTime expiredAt = LocalDateTime.now().plusDays(14);
 
 }

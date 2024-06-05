@@ -18,3 +18,5 @@ CREATE TABLE IF NOT EXISTS urls(
                                    created_at TIMESTAMP DEFAULT current_timestamp,
                                    expired_at TIMESTAMP DEFAULT current_timestamp + INTERVAL '14 days'
 );
+CREATE SEQUENCE USERS_SEQ START WITH 20 INCREMENT BY 1;
+CREATE SEQUENCE URLS_SEQ  START WITH 20 INCREMENT BY 1;

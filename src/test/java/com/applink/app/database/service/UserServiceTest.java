@@ -1,17 +1,13 @@
 package com.applink.app.database.service;
 
-import com.applink.app.configuration.IT;
 import com.applink.app.configuration.IntegrationTestsDatabase;
 import com.applink.app.database.entity.UserEntity;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.context.junit4.SpringRunner;
 
 
 @SpringBootTest
