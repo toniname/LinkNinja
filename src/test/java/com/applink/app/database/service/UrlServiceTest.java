@@ -81,7 +81,6 @@ public class UrlServiceTest extends IntegrationTestsDatabase {
     @Test
     public void testListAllUserUrlsByUsername() {
         List<UrlEntity> johnDoe = urlService.findAllUrlEntityByUsername("jane_smith");
-
         Assertions.assertNotNull(johnDoe);
         Assertions.assertEquals(johnDoe.size(), 1);
     }
