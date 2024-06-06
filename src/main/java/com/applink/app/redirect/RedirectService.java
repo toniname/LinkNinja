@@ -1,11 +1,10 @@
 package com.applink.app.redirect;
 
 import com.applink.app.database.entity.UrlEntity;
-import com.applink.app.database.errors.UrlNotFoundException;
+import com.applink.app.database.exception.UrlNotFoundException;
 import com.applink.app.database.service.UrlService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service

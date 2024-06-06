@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class LoginController {
     private final LoginService loginService;
 
-    @PostMapping("/api/v3/login")
+    @PostMapping("/api/v1/login")
     public LoginResponse login(@RequestBody LoginRequest loginRequest) {
         return loginService.login(loginRequest);
     }
