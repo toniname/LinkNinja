@@ -1,7 +1,4 @@
 name: Build project
-command: chmod +x ./gradlew
-env:
-    APP_PROFILE: 'test'
 on:
   push:
     branches: [ master ]
