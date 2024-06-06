@@ -46,4 +46,9 @@ public class UrlService {
     public String getLongUrl(String shortUrl) {
         return urlRepository.findEntityByShortUrl(shortUrl);
     }
+
+    public boolean isCodeValid(String code) {
+        String shortUrl = urlRepository.findEntityByShortUrl(code);
+        return shortUrl == null || shortUrl.isEmpty();
+    }
 }
