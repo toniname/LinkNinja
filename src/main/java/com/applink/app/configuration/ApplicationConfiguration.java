@@ -35,17 +35,13 @@ public class ApplicationConfiguration {
                                 .requestMatchers("/swagger-ui-custom.html",
                                         "/swagger-ui/**",
                                         "/api-docs/**",
-                                        "/urls/*")
-                                .permitAll()
+                                        "/urls/*").permitAll()
                                 .requestMatchers( HttpMethod.POST,"/api/v1/login").permitAll()
                                 .requestMatchers( HttpMethod.POST,"/api/v1/registration").permitAll()
-                                .requestMatchers(HttpMethod.GET,"/api/v1/links").authenticated()
-                                .requestMatchers(HttpMethod.POST, "/api/v1/urls/create").authenticated()
-                                .requestMatchers(HttpMethod.GET, "/404").permitAll()
-                                .requestMatchers(HttpMethod.GET, "/urls/*").permitAll()
-                                .anyRequest()
-                                .authenticated()
-                )
+                                .requestMatchers( HttpMethod.POST, "/api/v1/create").permitAll()
+                                .requestMatchers( HttpMethod.GET, "/404").permitAll()
+                                .requestMatchers( HttpMethod.GET, "/urls/*").permitAll()
+                                .anyRequest().authenticated())
                 .userDetailsService(userDetailsService)
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
