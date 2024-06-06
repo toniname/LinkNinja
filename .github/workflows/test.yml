@@ -9,10 +9,10 @@ on:
   workflow_dispatch:
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Or your desired runner
     steps:
       - uses: actions/checkout@v3
-      - name: Set up JDK 21 (or your desired version)
+      - name: Set up JDK 17 (or your desired version)
         uses: actions/setup-java@v3
         with:
           java-version: 21
@@ -22,4 +22,4 @@ jobs:
         with:
           gradle-version: 8.4
           tasks: ':test'
-          arguments: '-Ptest'
+          arguments: '-Ptest'  # Optional, depending on profile activation
