@@ -85,4 +85,11 @@ public class UrlServiceTest extends IntegrationTestsDatabase {
         Assertions.assertEquals(johnDoe.size(), 1);
     }
 
+    @Test
+    public void testThatLongUrlIsFound() {
+        String shortUrl = "ghi789";
+        String longUrl = urlService.getLongUrl(shortUrl);
+        Assertions.assertEquals(0, longUrl.compareTo("https://google.com"));
+    }
+
 }

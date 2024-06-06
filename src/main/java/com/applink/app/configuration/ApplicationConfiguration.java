@@ -32,8 +32,7 @@ public class ApplicationConfiguration {
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(
                         req -> req
-                                .requestMatchers("/api/v1/login",
-                                        "/swagger-ui-custom.html",
+                                .requestMatchers("/swagger-ui-custom.html",
                                         "/swagger-ui/**",
                                         "/api-docs/**",
                                         "/urls/*")
@@ -42,6 +41,7 @@ public class ApplicationConfiguration {
                                 .requestMatchers( HttpMethod.POST,"/api/v1/registration").permitAll()
                                 .requestMatchers(HttpMethod.GET,"/api/v1/links").permitAll()
                                 .requestMatchers(HttpMethod.POST, "/api/v1/urls/create").permitAll()
+                                .requestMatchers(HttpMethod.GET, "/404").permitAll()
                                 .anyRequest()
                                 .authenticated()
                 )

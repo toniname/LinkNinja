@@ -32,7 +32,7 @@ public class UrlService {
     public UrlEntity updateUrlEntity(UrlEntity urlEntity) {
         return urlRepository.save(urlEntity);
     }
-    @CacheEvict()
+    @CacheEvict(allEntries = true)
     public void deleteUrlEntity(UrlEntity urlEntity) {
         urlRepository.delete(urlEntity);
     }
@@ -40,5 +40,10 @@ public class UrlService {
     @Cacheable(cacheNames = "urls_list")
     public List<UrlEntity> findAllUrlEntityByUsername(String username) {
         return urlRepository.findAllByUserUsername(username);
+    }
+
+    @Cacheable
+    public String getLongUrl(String shortUrl) {
+        return urlRepository.findEntityByShortUrl(shortUrl);
     }
 }

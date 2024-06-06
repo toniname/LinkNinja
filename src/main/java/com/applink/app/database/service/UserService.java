@@ -14,10 +14,20 @@ import org.springframework.stereotype.Service;
 @CacheConfig(cacheNames = {"users"})
 public class UserService {
     private final UserRepository userRepository;
-    @CachePut("users")
+
+    @Cacheable
     public UserEntity getUserByUsername(String username) throws UsernameNotFoundException {
         return userRepository.findByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException(username));
+    }
+    @Cacheable
+    public UserEntity getUserById(Long id) {
+        return userRepository.findById(id)
+                .orElseThrow(() -> new UsernameNotFoundException(id.toString()));
+    }
+
+    public UserEntity saveUser(UserEntity user) {
+        return userRepository.save(user);
     }
 
 }
