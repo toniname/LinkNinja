@@ -63,14 +63,17 @@ public class CreationService {
 
 
     private String validateUrl(String url) {
-        String substringHttps = url.substring(1, 8);
-        String substringHttp = url.substring(1, 7);
+        if(url.length()>8) {
+            String substringHttps = url.substring(1, 8);
+            String substringHttp = url.substring(1, 7);
 
-        if ((substringHttps.compareTo("https://") == 0) || substringHttp.compareTo("https//") == 0) {
-            return url;
-        } else {
-            return "https://" + url;
+            if ((substringHttps.compareTo("https://") == 0) || substringHttp.compareTo("https//") == 0) {
+                return url;
+            } else {
+                return "https://" + url;
+            }
         }
+        return null;
     }
 
     private boolean isLinkActive(String link) {
