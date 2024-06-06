@@ -1,3 +1,5 @@
+run-name: chmod +x ./gradlew
+
 name: Build project
 on:
   push:
