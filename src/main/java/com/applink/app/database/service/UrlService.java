@@ -41,4 +41,9 @@ public class UrlService {
     public List<UrlEntity> findAllUrlEntityByUsername(String username) {
         return urlRepository.findAllByUserUsername(username);
     }
+
+    @Cacheable
+    public String getLongUrl(String shortUrl) {
+        return urlRepository.findEntityByShortUrl(shortUrl);
+    }
 }
