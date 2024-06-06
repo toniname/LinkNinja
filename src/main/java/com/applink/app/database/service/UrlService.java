@@ -32,7 +32,7 @@ public class UrlService {
     public UrlEntity updateUrlEntity(UrlEntity urlEntity) {
         return urlRepository.save(urlEntity);
     }
-    @CacheEvict()
+    @CacheEvict(allEntries = true)
     public void deleteUrlEntity(UrlEntity urlEntity) {
         urlRepository.delete(urlEntity);
     }
