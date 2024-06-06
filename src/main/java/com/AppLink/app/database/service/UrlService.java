@@ -39,8 +39,16 @@ public class UrlService {
         urlRepository.delete(urlEntity);
     }
 
+
     @Cacheable(cacheNames = "urls_list")
     public List<UrlEntity> findAllUrlEntityByUsername(String username) {
         return urlRepository.findAllByUserUsername(username);
+    }
+
+
+    @Cacheable
+    public UrlEntity getUrlById(long id) throws UrlNotFoundException {
+        return urlRepository.findById(id)
+                .orElseThrow(() -> new UrlNotFoundException("URL not found with id: " + id));
     }
 }
