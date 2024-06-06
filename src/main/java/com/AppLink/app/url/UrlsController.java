@@ -1,4 +1,4 @@
-package com.appLink.app.urls;
+package com.appLink.app.url;
 
 import org.springframework.web.bind.annotation.RestController;
 
