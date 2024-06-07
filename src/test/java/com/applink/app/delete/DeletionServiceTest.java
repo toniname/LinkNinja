@@ -18,10 +18,11 @@ class DeletionServiceTest extends IntegrationTestsDatabase{
 
     @Test
     public void testNotAllowed() {
-        String username = "dany";
-        String shortUrl = "abc123";
+        String username = "jane_smith";
+        String shortUrl = "yzu567";
 
         DeleteRequest deleteRequest = new DeleteRequest();
+        deleteRequest.setShortUrl(shortUrl);
 
         DeleteResponse deleteResponse = deletionService.delete(deleteRequest, username);
 
