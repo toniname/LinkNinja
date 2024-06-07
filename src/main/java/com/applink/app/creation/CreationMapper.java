@@ -2,10 +2,11 @@ package com.applink.app.creation;
 
 import com.applink.app.database.entity.UrlEntity;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-@Service
+@Component
 public class CreationMapper {
+
     @Value("${server.addres}")
     private String serverAddress;
 
