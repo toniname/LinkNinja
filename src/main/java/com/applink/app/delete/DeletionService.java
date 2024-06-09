@@ -9,10 +9,6 @@ import com.applink.app.delete.exceptions.DeletionNotAllowedException;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
-
-import java.security.Principal;
-
 @Service
 @AllArgsConstructor
 @Slf4j
@@ -27,8 +23,6 @@ public class DeletionService {
         try {
             UrlEntity urlEntity = urlService.findUrlEntityByShortUrl(deleteRequest.getShortUrl());
             UserEntity owner = urlEntity.getUser();
-
-
             if (owner.getUsername().equals(currentlyAuthenticatedUser)) {
                 urlService.deleteUrlEntity(urlEntity);
                 return DeleteResponse.success();

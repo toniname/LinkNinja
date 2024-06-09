@@ -1,5 +1,10 @@
 package com.applink.app.configuration;
 
+import io.swagger.v3.oas.models.Components;
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.info.Info;
+import io.swagger.v3.oas.models.security.SecurityRequirement;
+import io.swagger.v3.oas.models.security.SecurityScheme;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -41,6 +46,7 @@ public class ApplicationConfiguration {
                                 .requestMatchers( HttpMethod.POST, "/api/v1/create").authenticated()
                                 .requestMatchers( HttpMethod.GET, "/api/v1/urls").authenticated()
                                 .requestMatchers( HttpMethod.POST, "/api/v1/delete").authenticated()
+                                .requestMatchers( HttpMethod.POST, "/api/v1/extend").authenticated()
                                 .requestMatchers( HttpMethod.GET, "/404").permitAll()
                                 .requestMatchers( HttpMethod.GET, "/urls/*").permitAll()
                                 .anyRequest().authenticated())
@@ -60,5 +66,14 @@ public class ApplicationConfiguration {
     public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration) throws Exception {
         return configuration.getAuthenticationManager();
     }
+    @Bean
+    public OpenAPI customOpenAPI() {
 
+        return new OpenAPI()
+                .info(new Info().title("LinkNinjas auth service"))
+                .addSecurityItem(new SecurityRequirement().addList("LinkNinjasSecurityScheme"))
+                .components(new Components().addSecuritySchemes("LinkNinjasSecurityScheme", new SecurityScheme()
+                        .name("LinkNinjasSecurityScheme").type(SecurityScheme.Type.HTTP).scheme("bearer").bearerFormat("JWT")));
+
+    }
 }

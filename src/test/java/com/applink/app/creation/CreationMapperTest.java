@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @RunWith(MockitoJUnitRunner.class)
 @IT
-class CreationMapperTest extends IntegrationTestsDatabase {
+public class CreationMapperTest extends IntegrationTestsDatabase {
     
     @Autowired
     private CreationMapper creationMapper;

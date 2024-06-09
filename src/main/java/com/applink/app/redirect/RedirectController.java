@@ -18,11 +18,9 @@ public class RedirectController {
     public RedirectView frontController(@PathVariable String id) {
         try {
             String byShortUrl = redirectService.redirectString(id);
-
             if (!(byShortUrl == null || byShortUrl.isEmpty())) {
                 return new RedirectView(byShortUrl);
             }
-
         } catch (Exception e) {
             log.error(e.getMessage());
         }

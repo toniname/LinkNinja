@@ -1,5 +1,6 @@
 package com.applink.app.url;
 
+import com.applink.app.database.dto.UrlDto;
 import com.applink.app.database.entity.UrlEntity;
 import org.springframework.stereotype.Component;
 
