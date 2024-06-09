@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class CreationMapper {
 
-    @Value("${server.addres}")
+    @Value("${address}")
     private String serverAddress;
 
 
