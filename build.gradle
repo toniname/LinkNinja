@@ -69,3 +69,7 @@ dependencies {
 	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:${openApiVersion}")
 
 }
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
