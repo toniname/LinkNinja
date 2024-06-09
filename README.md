@@ -42,3 +42,10 @@ host - your database host, port - your database port, database - your database n
 * DATASOURCE_PASSWORD-datasource user password -> DATASOURCE_PASSWORD=yourDatabaseUserPassword
 * JWT_TOKEN-secret token to generate jwt tokens for users and validate them -> JWT_TOKEN=yourToken
 * SERVER_ADDRESS-your server address for link shorting -> SERVER_ADDRESS=yourServerAddress
+
+
+# HOW TO MAKE A DOCKER IMAGE AND START WITH COMPOSE
+- First configure DOCKER COMPOSE FILES FOR YOUR NEEDS
+- EXEC gradle bootJar to make a project jar
+- COPY jar to docker dir
+- RUN DOCKER-COMPOSE.YML
