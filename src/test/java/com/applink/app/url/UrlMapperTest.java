@@ -2,6 +2,7 @@ package com.applink.app.url;
 
 import com.applink.app.configuration.IT;
 import com.applink.app.configuration.IntegrationTestsDatabase;
+import com.applink.app.database.dto.UrlDto;
 import com.applink.app.database.entity.UrlEntity;
 import com.applink.app.database.service.UrlService;
 import org.junit.jupiter.api.Test;

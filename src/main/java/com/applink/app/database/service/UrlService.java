@@ -18,12 +18,12 @@ import java.util.List;
 public class UrlService {
     private final UrlRepository urlRepository;
 
-    @Cacheable
+    @CachePut
     public UrlEntity findUrlEntityByShortUrl(String shortUrl) throws UrlNotFoundException {
         return urlRepository.findUrlEntitiesByShortUrl(shortUrl)
                 .orElseThrow(() -> new UrlNotFoundException(shortUrl));
     }
-    @Cacheable
+    @CachePut
     public UrlEntity saveUrlEntity(UrlEntity urlEntity) {
         return urlRepository.save(urlEntity);
     }

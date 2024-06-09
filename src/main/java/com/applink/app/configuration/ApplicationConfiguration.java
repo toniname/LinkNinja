@@ -46,6 +46,7 @@ public class ApplicationConfiguration {
                                 .requestMatchers( HttpMethod.POST, "/api/v1/create").authenticated()
                                 .requestMatchers( HttpMethod.GET, "/api/v1/urls").authenticated()
                                 .requestMatchers( HttpMethod.POST, "/api/v1/delete").authenticated()
+                                .requestMatchers( HttpMethod.POST, "/api/v1/extend").authenticated()
                                 .requestMatchers( HttpMethod.GET, "/404").permitAll()
                                 .requestMatchers( HttpMethod.GET, "/urls/*").permitAll()
                                 .anyRequest().authenticated())

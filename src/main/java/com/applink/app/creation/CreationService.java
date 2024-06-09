@@ -4,16 +4,15 @@ import com.applink.app.database.entity.UrlEntity;
 import com.applink.app.database.entity.UserEntity;
 import com.applink.app.database.service.UrlService;
 import com.applink.app.database.service.UserService;
+import jakarta.annotation.Nullable;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-
-import java.net.HttpURLConnection;
-import java.net.URI;
-import java.net.URL;
 import java.time.LocalDateTime;
 
 import java.util.UUID;
+
+import static com.applink.app.update.UpdateService.isValidUrl;
 
 @Service
 @RequiredArgsConstructor
@@ -63,11 +62,15 @@ public class CreationService {
 
 
     private String validateUrl(String url) {
-        if(url.length()>8) {
-            String substringHttps = url.substring(1, 8);
-            String substringHttp = url.substring(1, 7);
+        return getString(url);
+    }
 
-            if ((substringHttps.compareTo("https://") == 0) || substringHttp.compareTo("https//") == 0) {
+    @Nullable
+    public static String getString(String url) {
+        if(url.length()>8) {
+            String substringHttps = url.substring(0, 8);
+            String substringHttp = url.substring(0, 7);
+            if ((substringHttps.compareTo("https://") == 0) || substringHttp.compareTo("http://") == 0) {
                 return url;
             } else {
                 return "https://" + url;
@@ -77,16 +80,7 @@ public class CreationService {
     }
 
     private boolean isLinkActive(String link) {
-        try {
-            URL url = URI.create(link).toURL();
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.setRequestMethod("HEAD");
-            int responseCode = connection.getResponseCode();
-            return (200 <= responseCode && responseCode <= 399);
-        } catch (Exception e) {
-            log.error("{}{}", e.getMessage(), link);
-            return false;
-        }
+        return isValidUrl(link, log);
     }
 
 }
