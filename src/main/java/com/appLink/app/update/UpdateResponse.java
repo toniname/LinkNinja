@@ -17,7 +17,7 @@ public class UpdateResponse {
 
 
     public static UpdateResponse ok(UrlDto urlDto) {
-        return UpdateResponse.builder().updateError(UpdateError.success).urlDto(urlDto).build();
+        return UpdateResponse.builder().updateError(UpdateError.SUCCESS).urlDto(urlDto).build();
     }
 
     public static UpdateResponse error(UpdateError updateError) {
@@ -25,8 +25,8 @@ public class UpdateResponse {
     }
 
     public enum UpdateError {
-        success,
-        belongsToAnotherUser,
-        linkExpired
+        SUCCESS,
+        BELONGS_TO_ANOTHER_USER,
+        LINK_EXPIRED
     }
 }

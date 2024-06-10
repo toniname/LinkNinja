@@ -5,7 +5,7 @@ import com.appLink.app.database.entity.UrlEntity;
 import com.appLink.app.database.entity.UserEntity;
 import com.appLink.app.database.error.UrlNotFoundException;
 import com.appLink.app.database.service.UrlService;
-import com.appLink.app.delete.exeptions.DeletionNotAllowedException;
+import com.appLink.app.delete.exceptions.DeletionNotAllowedException;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

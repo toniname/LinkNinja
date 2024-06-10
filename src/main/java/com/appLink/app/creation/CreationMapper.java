@@ -1,4 +1,4 @@
-package com.applink.app.creation;
+package com.appLink.app.creation;
 
 
 import com.appLink.app.creation.CreationResponse;
