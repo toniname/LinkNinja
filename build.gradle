@@ -12,7 +12,7 @@ ext {
 	set("openApiVersion", "2.4.0")
 }
 
-group = 'com.AppLink'
+group = 'com.applink.app'
 version = '0.0.1-SNAPSHOT'
 
 java {
@@ -67,8 +67,8 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-cache:${springCacheVersion}")
 
 	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:${openApiVersion}")
-}
 
+}
 
 tasks.named('test') {
 	useJUnitPlatform()
