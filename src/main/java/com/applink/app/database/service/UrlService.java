@@ -51,4 +51,7 @@ public class UrlService {
         String shortUrl = urlRepository.findEntityByShortUrl(code);
         return shortUrl == null || shortUrl.isEmpty();
     }
+    public UrlEntity getUrlEntityById(Long id) {
+        return urlRepository.findById(id).orElse(null);
+    }
 }
