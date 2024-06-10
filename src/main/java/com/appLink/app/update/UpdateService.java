@@ -16,7 +16,8 @@ import java.net.URI;
 import java.net.URL;
 import java.time.LocalDateTime;
 
-import static com.applink.app.creation.CreationService.getString;
+import static com.appLink.app.creation.CreationService.getString;
+
 
 @Service
 @RequiredArgsConstructor
@@ -39,12 +40,12 @@ public class UpdateService {
             }
             if (!isUrlDateValid(urlEntity.getExpiredAt())) {
                 urlService.deleteUrlEntity(urlEntity);
-                return UpdateResponse.error(UpdateResponse.UpdateError.linkExpired);
+                return UpdateResponse.error(UpdateResponse.UpdateError.LINK_EXPIRED);
             }
         } catch (UrlNotFoundException e) {
             log.error(e.getMessage());
         }
-        return UpdateResponse.error(UpdateResponse.UpdateError.belongsToAnotherUser);
+        return UpdateResponse.error(UpdateResponse.UpdateError.BELONGS_TO_ANOTHER_USER);
     }
 
     private UrlDto mapEntityToDto(UrlEntity urlEntity) {

@@ -13,7 +13,8 @@ import java.time.LocalDateTime;
 
 import java.util.UUID;
 
-import static com.applink.app.update.UpdateService.isValidUrl;
+import static com.appLink.app.update.UpdateService.isValidUrl;
+
 
 @Service
 @RequiredArgsConstructor
@@ -21,7 +22,7 @@ import static com.applink.app.update.UpdateService.isValidUrl;
 public class CreationService {
     private final UrlService urlService;
     private final UserService userService;
-    private final com.applink.app.creation.CreationMapper creationMapper;
+    private final CreationMapper creationMapper;
 
 
     public CreationResponse create(CreationRequest urlCreationRequest, String username) {

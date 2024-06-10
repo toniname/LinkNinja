@@ -1,4 +1,4 @@
-package com.appLink.app.delete.exeptions;
+package com.appLink.app.delete.exceptions;
 
 public class DeletionNotAllowedException extends RuntimeException {
 
