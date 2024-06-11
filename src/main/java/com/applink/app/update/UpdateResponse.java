@@ -1,6 +1,7 @@
 package com.applink.app.update;
 
 import com.applink.app.database.dto.UrlDto;
+import com.applink.app.url.RegistrationError;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,10 +14,11 @@ import lombok.NoArgsConstructor;
 public class UpdateResponse {
     private UpdateError updateError;
     private UrlDto urlDto;
+    private RegistrationError error;
 
 
     public static UpdateResponse ok(UrlDto urlDto) {
-        return UpdateResponse.builder().updateError(UpdateError.success).urlDto(urlDto).build();
+        return UpdateResponse.builder().updateError(UpdateError.SUCCESS).urlDto(urlDto).build();
     }
 
     public static UpdateResponse error(UpdateError updateError) {
@@ -24,8 +26,8 @@ public class UpdateResponse {
     }
 
     public enum UpdateError {
-        success,
-        belongsToAnotherUser,
-        linkExpired
+        SUCCESS,
+        BELONGS_TO_ANOTHER_USER,
+        LINK_EXPIRED
     }
 }

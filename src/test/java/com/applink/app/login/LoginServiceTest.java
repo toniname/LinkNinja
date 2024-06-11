@@ -26,7 +26,7 @@ class LoginServiceTest extends IntegrationTestsDatabase {
 
         assertNotNull(login);
         assertNotNull(login.getToken());
-        assertEquals(LoginResponse.LoginError.success, login.getLoginError());
+        assertEquals(LoginResponse.LoginError.SUCCESS, login.getLoginError());
     }
 
     @Test
@@ -42,7 +42,7 @@ class LoginServiceTest extends IntegrationTestsDatabase {
 
         assertNotNull(login);
         assertNull(login.getToken());
-        assertEquals(LoginResponse.LoginError.badCredentials, login.getLoginError());
+        assertEquals(LoginResponse.LoginError.BAD_CREDENTIALS, login.getLoginError());
     }
 
 }

@@ -23,6 +23,7 @@ import static com.applink.app.creation.CreationService.getString;
 public class UpdateService {
     private final UrlService urlService;
 
+
     @Value("${address}")
     private String serverAddress;
 
@@ -38,12 +39,12 @@ public class UpdateService {
             }
             if (!isUrlDateValid(urlEntity.getExpiredAt())) {
                 urlService.deleteUrlEntity(urlEntity);
-                return UpdateResponse.error(UpdateResponse.UpdateError.linkExpired);
+                return UpdateResponse.error(UpdateResponse.UpdateError.LINK_EXPIRED);
             }
         } catch (UrlNotFoundException e) {
             log.error(e.getMessage());
         }
-        return UpdateResponse.error(UpdateResponse.UpdateError.belongsToAnotherUser);
+        return UpdateResponse.error(UpdateResponse.UpdateError.BELONGS_TO_ANOTHER_USER);
     }
 
     private UrlDto mapEntityToDto(UrlEntity urlEntity) {

@@ -23,7 +23,7 @@ class UpdateServiceTest extends IntegrationTestsDatabase{
         updateRequest.setLongUrl(longUrl);
 
         UpdateResponse update = updateService.update(updateRequest, username);
-        assertEquals(0, update.getUpdateError().compareTo(UpdateResponse.UpdateError.success));
+        assertEquals(0, update.getUpdateError().compareTo(UpdateResponse.UpdateError.SUCCESS));
         assertNotNull(update);
         assertEquals(0, update.getUrlDto().getLongUrl().compareTo(longUrl));
     }

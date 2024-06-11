@@ -10,15 +10,15 @@ public class LoginResponse {
     private LoginError loginError;
 
     public static LoginResponse success(String token){
-        return LoginResponse.builder().token(token).loginError(LoginError.success).build();
+        return LoginResponse.builder().token(token).loginError(LoginError.SUCCESS).build();
     }
 
     public static LoginResponse failure(){
-        return LoginResponse.builder().token(null).loginError(LoginError.badCredentials).build();
+        return LoginResponse.builder().token(null).loginError(LoginError.BAD_CREDENTIALS).build();
     }
 
     public enum LoginError {
-        success,
-        badCredentials
+        SUCCESS,
+        BAD_CREDENTIALS
     }
 }
