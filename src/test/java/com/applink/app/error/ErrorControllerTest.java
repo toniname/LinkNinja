@@ -1,7 +1,6 @@
 package com.applink.app.error;
 
 
-import com.applink.app.configuration.JwtFilter;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
