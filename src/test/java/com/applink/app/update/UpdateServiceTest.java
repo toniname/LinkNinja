@@ -1,6 +1,5 @@
 package com.applink.app.update;
 
-
 import com.applink.app.configuration.IT;
 import com.applink.app.configuration.IntegrationTestsDatabase;
 import org.junit.jupiter.api.Test;
@@ -9,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import static org.junit.jupiter.api.Assertions.*;
 
 @IT
-class UpdateServiceTest extends IntegrationTestsDatabase {
+class UpdateServiceTest extends IntegrationTestsDatabase{
     @Autowired
     private UpdateService updateService;
 

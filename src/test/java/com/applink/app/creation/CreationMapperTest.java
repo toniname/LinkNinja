@@ -1,5 +1,6 @@
 package com.applink.app.creation;
 
+
 import com.applink.app.configuration.IT;
 import com.applink.app.configuration.IntegrationTestsDatabase;
 import com.applink.app.database.entity.UrlEntity;
@@ -18,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @RunWith(MockitoJUnitRunner.class)
 @IT
 public class CreationMapperTest extends IntegrationTestsDatabase {
-
+    
     @Autowired
     private CreationMapper creationMapper;
 

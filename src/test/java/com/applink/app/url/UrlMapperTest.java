@@ -1,6 +1,5 @@
 package com.applink.app.url;
 
-
 import com.applink.app.configuration.IT;
 import com.applink.app.configuration.IntegrationTestsDatabase;
 import com.applink.app.database.dto.UrlDto;

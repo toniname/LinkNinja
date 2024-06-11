@@ -1,3 +1,4 @@
+
 CREATE TABLE urls(
                      id BIGINT PRIMARY KEY,
                      short_url VARCHAR(12) NOT NULL ,

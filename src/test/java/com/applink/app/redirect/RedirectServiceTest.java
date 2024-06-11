@@ -1,6 +1,5 @@
 package com.applink.app.redirect;
 
-
 import com.applink.app.configuration.IT;
 import com.applink.app.configuration.IntegrationTestsDatabase;
 import com.applink.app.database.entity.UrlEntity;

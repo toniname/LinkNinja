@@ -1,6 +1,5 @@
 package com.applink.app.login;
 
-
 import com.applink.app.configuration.IT;
 import com.applink.app.configuration.IntegrationTestsDatabase;
 import org.junit.jupiter.api.Test;

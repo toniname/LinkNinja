@@ -25,3 +25,4 @@ VALUES
     ('vwx234', 'https://google.com', 8, 110, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP + INTERVAL '14 DAYS'),
     ('yzu567', 'https://google.com', 9, 70, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP - INTERVAL '14 DAYS'),
     ('123abc', 'https://google.com', 10, 180, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP - INTERVAL '14 DAYS');
+
