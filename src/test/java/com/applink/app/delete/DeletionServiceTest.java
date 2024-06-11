@@ -6,8 +6,6 @@ import com.applink.app.configuration.IntegrationTestsDatabase;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.security.Principal;
-
 
 @IT
 class DeletionServiceTest extends IntegrationTestsDatabase{
@@ -26,8 +24,8 @@ class DeletionServiceTest extends IntegrationTestsDatabase{
 
         DeleteResponse deleteResponse = deletionService.delete(deleteRequest, username);
 
-        assertEquals("failure", deleteResponse.getStatus());
-        assertEquals("not allowed", deleteResponse.getMessage());
+        assertEquals(DeleteResponceMessage.NOT_ALLOWED.getStatus(), deleteResponse.getStatus());
+        assertEquals(DeleteResponceMessage.NOT_ALLOWED.getMesaage(), deleteResponse.getMessage());
     }
 
     @Test
@@ -40,8 +38,8 @@ class DeletionServiceTest extends IntegrationTestsDatabase{
 
         DeleteResponse deleteResponse = deletionService.delete(deleteRequest, username);
 
-        assertEquals("failure", deleteResponse.getStatus());
-        assertEquals("url not found", deleteResponse.getMessage());
+        assertEquals(DeleteResponceMessage.NOT_FOUND.getStatus(), deleteResponse.getStatus());
+        assertEquals(DeleteResponceMessage.NOT_FOUND.getMesaage(), deleteResponse.getMessage());
     }
 
     @Test
@@ -54,8 +52,8 @@ class DeletionServiceTest extends IntegrationTestsDatabase{
 
         DeleteResponse deleteResponse = deletionService.delete(deleteRequest, username);
 
-        assertEquals("success", deleteResponse.getStatus());
-        assertEquals("url was successfully deleted", deleteResponse.getMessage());
+        assertEquals(DeleteResponceMessage.SUCCESS.getStatus(), deleteResponse.getStatus());
+        assertEquals(DeleteResponceMessage.SUCCESS.getMesaage(), deleteResponse.getMessage());
     }
 
 }
