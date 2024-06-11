@@ -38,7 +38,6 @@ class LoginServiceTest extends IntegrationTestsDatabase {
 
         LoginResponse login = loginService.login(loginRequest);
 
-        assertFalse(login.getToken() != "null");
+        assertNull(login.getToken());
     }
-
 }
