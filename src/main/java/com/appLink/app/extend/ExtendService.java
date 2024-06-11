@@ -2,7 +2,8 @@ package com.appLink.app.extend;
 
 
 import com.appLink.app.database.entity.UrlEntity;
-import com.appLink.app.database.error.UrlNotFoundException;
+
+import com.appLink.app.database.exception.UrlNotFoundException;
 import com.appLink.app.database.service.UrlService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

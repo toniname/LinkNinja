@@ -1,9 +1,8 @@
 package com.appLink.app.delete;
 
-
 import com.appLink.app.database.entity.UrlEntity;
 import com.appLink.app.database.entity.UserEntity;
-import com.appLink.app.database.error.UrlNotFoundException;
+import com.appLink.app.database.exception.UrlNotFoundException;
 import com.appLink.app.database.service.UrlService;
 import com.appLink.app.delete.exceptions.DeletionNotAllowedException;
 import lombok.AllArgsConstructor;

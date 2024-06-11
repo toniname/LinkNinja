@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController("com/applink/app/creation")
+@RestController("com/appLink/app/creation")
 @RequiredArgsConstructor
 public class CreateController {
     private final CreationService creationService;

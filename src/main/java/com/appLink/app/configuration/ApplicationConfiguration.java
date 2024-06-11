@@ -25,7 +25,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 @RequiredArgsConstructor
-@ComponentScan(value = "com.applink.app")
+@ComponentScan(value = "com.appLink.app")
 public class ApplicationConfiguration {
     private final UserDetailsService userDetailsService;
     private final JwtFilter jwtFilter;

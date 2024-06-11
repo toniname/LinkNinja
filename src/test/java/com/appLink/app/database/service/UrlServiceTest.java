@@ -1,11 +1,10 @@
 package com.appLink.app.database.service;
 
-
 import com.appLink.app.configuration.IT;
 import com.appLink.app.configuration.IntegrationTestsDatabase;
 import com.appLink.app.database.entity.UrlEntity;
 import com.appLink.app.database.entity.UserEntity;
-import com.appLink.app.database.error.UrlNotFoundException;
+import com.appLink.app.database.exception.UrlNotFoundException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

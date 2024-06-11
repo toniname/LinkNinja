@@ -1,7 +1,6 @@
 package com.appLink.app.creation;
 
 
-import com.appLink.app.creation.CreationResponse;
 import com.appLink.app.database.entity.UrlEntity;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

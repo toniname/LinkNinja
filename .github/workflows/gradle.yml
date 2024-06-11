@@ -1,7 +1,4 @@
 name: Build project
-command: chmod +x ./gradlew
-env:
-  APP_PROFILE: 'test'
 on:
   push:
     branches: [ master ]
@@ -19,6 +16,8 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
           cache: gradle
+      - name: Make graddle executable
+        run: chmod +x ./gradlew
       - name: Build with Gradle
         run: ./gradlew build
         env:

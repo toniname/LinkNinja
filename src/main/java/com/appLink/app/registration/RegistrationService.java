@@ -1,6 +1,5 @@
 package com.appLink.app.registration;
 
-
 import com.appLink.app.database.entity.UserEntity;
 import com.appLink.app.database.service.JwtService;
 import com.appLink.app.database.service.UserService;
