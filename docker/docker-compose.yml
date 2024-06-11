@@ -2,9 +2,8 @@ version: '1'
 
 services:
   app:
-    image: app
-    build:
-      context: .
+    image: mightyloot/app:0.2
+
     container_name: app
     ports:
       - 9999:9999
