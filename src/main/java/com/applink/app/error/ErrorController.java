@@ -1,4 +1,4 @@
-package com.appLink.app.error;
+package com.applink.app.error;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
