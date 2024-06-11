@@ -5,16 +5,17 @@ import com.applink.app.configuration.IntegrationTestsDatabase;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @IT
-class UpdateServiceTest extends IntegrationTestsDatabase{
+class UpdateServiceTest extends IntegrationTestsDatabase {
     @Autowired
     private UpdateService updateService;
 
-
     @Test
     public void testThatUpdateMethodWorks() {
+        // Arrange
         String username = "john_doe";
         String shortUrl = "abc123";
         String longUrl = "https://github.com";
@@ -22,9 +23,12 @@ class UpdateServiceTest extends IntegrationTestsDatabase{
         updateRequest.setShortUrl(shortUrl);
         updateRequest.setLongUrl(longUrl);
 
+        // Act
         UpdateResponse update = updateService.update(updateRequest, username);
-        assertEquals(0, update.getUpdateError().compareTo(UpdateResponse.UpdateError.SUCCESS));
+
+        // Assert
+        assertEquals(UpdateResponse.UpdateError.SUCCESS, update.getUpdateError());
         assertNotNull(update);
-        assertEquals(0, update.getUrlDto().getLongUrl().compareTo(longUrl));
+        assertEquals(longUrl, update.getUrlDto().getLongUrl());
     }
 }
