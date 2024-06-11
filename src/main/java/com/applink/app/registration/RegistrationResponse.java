@@ -1,5 +1,6 @@
 package com.applink.app.registration;
 
+import com.applink.app.url.RegistrationError;
 import lombok.Builder;
 import lombok.Data;
 
@@ -9,15 +10,8 @@ public class RegistrationResponse {
     private String token;
     private RegistrationError error;
 
-    public enum RegistrationError {
-        success,
-        usernameAlreadyExists,
-        passwordToWeek,
-        usernameAlreadyExistsAndPasswordToWeek
-    }
-
     public static RegistrationResponse success(String token) {
-        return builder().error(RegistrationError.success).token(token).build();
+        return builder().error(RegistrationError.SUCCESS).token(token).build();
     }
 
     public static RegistrationResponse registrationError(RegistrationError error) {

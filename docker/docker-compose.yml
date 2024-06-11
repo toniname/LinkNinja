@@ -1,0 +1,29 @@
+version: '1'
+
+services:
+  app:
+    image: app
+    build:
+      context: .
+    container_name: app
+    ports:
+      - 9999:9999
+    depends_on:
+      - db
+    environment:
+      - APP_PROFILE=prod
+      - DATASOURCE_URL=jdbc:postgresql://db:5432/postgres
+      - DATASOURCE_USERNAME=postgres
+      - DATASOURCE_PASSWORD=postgres
+      - JWT_TOKEN=superStrongTokenForProductionTest123456789123123
+      - ADDRESS=localhost:9999
+  db:
+    image: 'postgres:16.2'
+    container_name: db
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=databaseName
+      - POSTGRES_HOST_AUTH_METHOD=trust

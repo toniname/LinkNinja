@@ -24,8 +24,6 @@ public class DeletionService {
         try {
             UrlEntity urlEntity = urlService.findUrlEntityByShortUrl(deleteRequest.getShortUrl());
             UserEntity owner = urlEntity.getUser();
-
-
             if (owner.getUsername().equals(currentlyAuthenticatedUser)) {
                 urlService.deleteUrlEntity(urlEntity);
                 return new DeleteResponse(DeleteResponceMessage.SUCCESS);

@@ -7,18 +7,13 @@ import lombok.Data;
 @Builder
 public class LoginResponse {
     private String token;
-    private LoginError loginError;
+    private LoginStatus loginStatus;
 
-    public static LoginResponse success(String token){
-        return LoginResponse.builder().token(token).loginError(LoginError.success).build();
+    public static LoginResponse success(String token) {
+        return LoginResponse.builder().token(token).loginStatus(LoginStatus.SUCCESS).build();
     }
 
-    public static LoginResponse failure(){
-        return LoginResponse.builder().token(null).loginError(LoginError.badCredentials).build();
-    }
-
-    public enum LoginError {
-        success,
-        badCredentials
+    public static LoginResponse failure() {
+        return LoginResponse.builder().token(null).loginStatus(LoginStatus.BAD_CREDENTIALS).build();
     }
 }
