@@ -1,12 +1,11 @@
-package com.appLink.app.url;
+package com.applink.app.url;
 
 
-import com.appLink.app.configuration.IT;
-import com.appLink.app.configuration.IntegrationTestsDatabase;
-import com.appLink.app.database.dto.UrlDto;
-import com.appLink.app.database.entity.UrlEntity;
-import com.appLink.app.database.service.UrlService;
-import com.appLink.app.url.UrlMapper;
+import com.applink.app.configuration.IT;
+import com.applink.app.configuration.IntegrationTestsDatabase;
+import com.applink.app.database.dto.UrlDto;
+import com.applink.app.database.entity.UrlEntity;
+import com.applink.app.database.service.UrlService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 

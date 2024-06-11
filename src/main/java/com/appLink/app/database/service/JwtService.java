@@ -1,4 +1,4 @@
-package com.appLink.app.database.service;
+package com.applink.app.database.service;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

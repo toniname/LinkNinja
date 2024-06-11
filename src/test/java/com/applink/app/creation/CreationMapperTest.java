@@ -1,9 +1,9 @@
-package com.appLink.app.creation;
+package com.applink.app.creation;
 
-import com.appLink.app.configuration.IT;
-import com.appLink.app.configuration.IntegrationTestsDatabase;
-import com.appLink.app.database.entity.UrlEntity;
-import com.appLink.app.database.entity.UserEntity;
+import com.applink.app.configuration.IT;
+import com.applink.app.configuration.IntegrationTestsDatabase;
+import com.applink.app.database.entity.UrlEntity;
+import com.applink.app.database.entity.UserEntity;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 

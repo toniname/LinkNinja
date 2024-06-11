@@ -1,11 +1,9 @@
-package com.appLink.app.url;
+package com.applink.app.url;
 
 
-import com.appLink.app.database.service.UrlService;
+import com.applink.app.database.service.UrlService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 @RequiredArgsConstructor

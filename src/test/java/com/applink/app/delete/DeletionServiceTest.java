@@ -1,13 +1,11 @@
-package com.appLink.app.delete;
+package com.applink.app.delete;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.appLink.app.configuration.IT;
-import com.appLink.app.configuration.IntegrationTestsDatabase;
+import com.applink.app.configuration.IT;
+import com.applink.app.configuration.IntegrationTestsDatabase;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import java.security.Principal;
 
 
 @IT

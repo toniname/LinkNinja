@@ -1,10 +1,10 @@
-package com.appLink.app.database.service;
+package com.applink.app.database.service;
 
 
-import com.appLink.app.database.entity.UrlEntity;
+import com.applink.app.database.entity.UrlEntity;
 
-import com.appLink.app.database.exception.UrlNotFoundException;
-import com.appLink.app.database.repository.UrlRepository;
+import com.applink.app.database.exception.UrlNotFoundException;
+import com.applink.app.database.repository.UrlRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;

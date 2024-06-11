@@ -1,4 +1,4 @@
-package com.appLink.app.configuration;
+package com.applink.app.configuration;
 
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;

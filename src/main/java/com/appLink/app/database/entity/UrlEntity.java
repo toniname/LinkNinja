@@ -1,4 +1,4 @@
-package com.appLink.app.database.entity;
+package com.applink.app.database.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

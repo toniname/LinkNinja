@@ -1,4 +1,4 @@
-package com.appLink.app.database.dto;
+package com.applink.app.database.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,4 +1,4 @@
-package com.appLink.app.login;
+package com.applink.app.login;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package com.appLink.app.configuration;
+package com.applink.app.configuration;
 import org.springframework.boot.test.context.SpringBootTest;
 
 

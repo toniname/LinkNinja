@@ -1,9 +1,9 @@
-package com.appLink.app.login;
+package com.applink.app.login;
 
 
-import com.appLink.app.database.entity.UserEntity;
-import com.appLink.app.database.service.JwtService;
-import com.appLink.app.database.service.UserService;
+import com.applink.app.database.entity.UserEntity;
+import com.applink.app.database.service.JwtService;
+import com.applink.app.database.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.*;

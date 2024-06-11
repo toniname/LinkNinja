@@ -1,10 +1,10 @@
-package com.appLink.app.redirect;
+package com.applink.app.redirect;
 
 
-import com.appLink.app.configuration.IT;
-import com.appLink.app.configuration.IntegrationTestsDatabase;
-import com.appLink.app.database.entity.UrlEntity;
-import com.appLink.app.database.service.UrlService;
+import com.applink.app.configuration.IT;
+import com.applink.app.configuration.IntegrationTestsDatabase;
+import com.applink.app.database.entity.UrlEntity;
+import com.applink.app.database.service.UrlService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

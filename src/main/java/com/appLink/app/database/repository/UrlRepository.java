@@ -1,7 +1,7 @@
-package com.appLink.app.database.repository;
+package com.applink.app.database.repository;
 
 
-import com.appLink.app.database.entity.UrlEntity;
+import com.applink.app.database.entity.UrlEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

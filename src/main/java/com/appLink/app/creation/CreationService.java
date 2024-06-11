@@ -1,9 +1,9 @@
-package com.appLink.app.creation;
+package com.applink.app.creation;
 
-import com.appLink.app.database.entity.UrlEntity;
-import com.appLink.app.database.entity.UserEntity;
-import com.appLink.app.database.service.UrlService;
-import com.appLink.app.database.service.UserService;
+import com.applink.app.database.entity.UrlEntity;
+import com.applink.app.database.entity.UserEntity;
+import com.applink.app.database.service.UrlService;
+import com.applink.app.database.service.UserService;
 import jakarta.annotation.Nullable;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-import static com.appLink.app.update.UpdateService.isValidUrl;
+import static com.applink.app.update.UpdateService.isValidUrl;
 
 @Service
 @RequiredArgsConstructor

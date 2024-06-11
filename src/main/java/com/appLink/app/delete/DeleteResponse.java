@@ -1,4 +1,4 @@
-package com.appLink.app.delete;
+package com.applink.app.delete;
 
 import lombok.Builder;
 import lombok.Data;

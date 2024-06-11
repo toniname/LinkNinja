@@ -1,10 +1,9 @@
-package com.appLink.app.url;
+package com.applink.app.url;
 
 import org.springframework.web.bind.annotation.RestController;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.security.Principal;
 

@@ -1,11 +1,8 @@
-package com.appLink.app.update;
+package com.applink.app.update;
 
 
-import com.appLink.app.configuration.IT;
-import com.appLink.app.configuration.IntegrationTestsDatabase;
-import com.appLink.app.update.UpdateRequest;
-import com.appLink.app.update.UpdateResponse;
-import com.appLink.app.update.UpdateService;
+import com.applink.app.configuration.IT;
+import com.applink.app.configuration.IntegrationTestsDatabase;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 

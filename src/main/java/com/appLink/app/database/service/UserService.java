@@ -1,7 +1,7 @@
-package com.appLink.app.database.service;
+package com.applink.app.database.service;
 
-import com.appLink.app.database.entity.UserEntity;
-import com.appLink.app.database.repository.UserRepository;
+import com.applink.app.database.entity.UserEntity;
+import com.applink.app.database.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CachePut;

@@ -1,8 +1,8 @@
-package com.appLink.app.registration;
+package com.applink.app.registration;
 
-import com.appLink.app.database.entity.UserEntity;
-import com.appLink.app.database.service.JwtService;
-import com.appLink.app.database.service.UserService;
+import com.applink.app.database.entity.UserEntity;
+import com.applink.app.database.service.JwtService;
+import com.applink.app.database.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;

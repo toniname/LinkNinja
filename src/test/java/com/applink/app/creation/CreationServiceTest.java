@@ -1,10 +1,10 @@
-package com.appLink.app.creation;
+package com.applink.app.creation;
 
 
-import com.appLink.app.configuration.IT;
-import com.appLink.app.configuration.IntegrationTestsDatabase;
-import com.appLink.app.database.entity.UserEntity;
-import com.appLink.app.database.service.UserService;
+import com.applink.app.configuration.IT;
+import com.applink.app.configuration.IntegrationTestsDatabase;
+import com.applink.app.database.entity.UserEntity;
+import com.applink.app.database.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 

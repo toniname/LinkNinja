@@ -1,4 +1,4 @@
-package com.appLink.app.creation;
+package com.applink.app.creation;
 
 import lombok.Data;
 

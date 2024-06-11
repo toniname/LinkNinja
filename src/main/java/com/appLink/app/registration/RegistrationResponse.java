@@ -1,4 +1,4 @@
-package com.appLink.app.registration;
+package com.applink.app.registration;
 
 import lombok.Builder;
 import lombok.Data;

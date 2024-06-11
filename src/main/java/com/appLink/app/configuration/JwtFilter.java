@@ -1,7 +1,7 @@
-package com.appLink.app.configuration;
+package com.applink.app.configuration;
 
 
-import com.appLink.app.database.service.JwtService;
+import com.applink.app.database.service.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

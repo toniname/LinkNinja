@@ -1,4 +1,4 @@
-package com.appLink.app.update;
+package com.applink.app.update;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;

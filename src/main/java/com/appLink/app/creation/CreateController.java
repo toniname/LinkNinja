@@ -1,4 +1,4 @@
-package com.appLink.app.creation;
+package com.applink.app.creation;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController("com/appLink/app/creation")
+@RestController("com/applink/app/creation")
 @RequiredArgsConstructor
 public class CreateController {
     private final CreationService creationService;

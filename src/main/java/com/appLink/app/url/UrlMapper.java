@@ -1,8 +1,8 @@
-package com.appLink.app.url;
+package com.applink.app.url;
 
 
-import com.appLink.app.database.dto.UrlDto;
-import com.appLink.app.database.entity.UrlEntity;
+import com.applink.app.database.dto.UrlDto;
+import com.applink.app.database.entity.UrlEntity;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.appLink.app.extend;
+package com.applink.app.extend;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,4 +1,4 @@
-package com.appLink.app.database.exception;
+package com.applink.app.database.exception;
 
 public class UrlNotFoundException extends RuntimeException {
     public UrlNotFoundException(String url) {

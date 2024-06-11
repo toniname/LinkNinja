@@ -1,7 +1,7 @@
-package com.appLink.app.update;
+package com.applink.app.update;
 
 
-import com.appLink.app.database.dto.UrlDto;
+import com.applink.app.database.dto.UrlDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
