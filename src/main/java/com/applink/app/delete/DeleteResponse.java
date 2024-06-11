@@ -1,25 +1,18 @@
 package com.applink.app.delete;
 
-import lombok.Builder;
 import lombok.Data;
 
-@Builder
 @Data
 public class DeleteResponse {
     private String status;
     private String message;
 
 
-    public static DeleteResponse success() {
-        return DeleteResponse.builder().status("success").message("url was successfully deleted").build();
+    public DeleteResponse(DeleteResponceMessage deleteResponceMessage) {
+        this.status = deleteResponceMessage.getStatus();
+        this.message = deleteResponceMessage.getMesaage();
     }
 
-    public static DeleteResponse notAllowed() {
-        return DeleteResponse.builder().status("failure").message("not allowed").build();
-    }
 
-    public static DeleteResponse notFound() {
-        return DeleteResponse.builder().status("failure").message("url not found").build();
-    }
 
 }
