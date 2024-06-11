@@ -3,6 +3,7 @@ package com.applink.app.registration;
 import com.applink.app.database.entity.UserEntity;
 import com.applink.app.database.service.JwtService;
 import com.applink.app.database.service.UserService;
+import com.applink.app.url.RegistrationError;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -28,13 +29,13 @@ public class RegistrationService {
         RegistrationResponse registrationResponse;
         if (!isUsernameOk && !isPasswordOk) {
             registrationResponse = RegistrationResponse
-                    .registrationError(RegistrationResponse.RegistrationError.usernameAlreadyExistsAndPasswordToWeek);
+                    .registrationError(RegistrationError.USERNAME_ALREADY_EXISTS_AND_PASSWORD_TO_WEEK);
         } else if (!isUsernameOk) {
             registrationResponse =
-                    RegistrationResponse.registrationError(RegistrationResponse.RegistrationError.usernameAlreadyExists);
+                    RegistrationResponse.registrationError(RegistrationError.USERNAME_ALREADY_EXISTS);
         } else if (!isPasswordOk) {
             registrationResponse =
-                    RegistrationResponse.registrationError(RegistrationResponse.RegistrationError.passwordToWeek);
+                    RegistrationResponse.registrationError(RegistrationError.PASSWORD_TO_WEEK);
         } else {
             registrationResponse = getRegistrationResponse(registrationRequest);
         }
