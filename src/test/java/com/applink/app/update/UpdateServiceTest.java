@@ -66,7 +66,8 @@ public class UpdateServiceTest extends IntegrationTestsDatabase {
 
     @Test
     public void testUpdate_urlNotFound_throwsUrlNotFoundException() {
-        when(urlService.findUrlEntityByShortUrl(eq("short-url"))).thenThrow(UrlNotFoundException.class);
+        when(urlService.findUrlEntityByShortUrl(eq("short-url")))
+                .thenThrow(new UrlNotFoundException("Url not found"));
 
         UpdateRequest updateRequest = UpdateRequest.builder()
                 .shortUrl("short-url")
