@@ -30,6 +30,9 @@ public class UpdateService {
         try {
             String s = validateUrl(updateRequest.getLongUrl());
             UrlEntity urlEntity = urlService.findUrlEntityByShortUrl(updateRequest.getShortUrl());
+            if (urlEntity == null) {
+                throw new UrlNotFoundException("Url not found");
+            }
             if (isOwnedByUser(urlEntity, username) && isUrlDateValid(urlEntity.getExpiredAt())
                     && isLinkActive(s)) {
                 urlEntity.setLongUrl(updateRequest.getLongUrl());
@@ -42,6 +45,7 @@ public class UpdateService {
             }
         } catch (UrlNotFoundException e) {
             log.error(e.getMessage());
+            throw e;
         }
         return UpdateResponse.error(UpdateResponse.UpdateError.belongsToAnotherUser);
     }
