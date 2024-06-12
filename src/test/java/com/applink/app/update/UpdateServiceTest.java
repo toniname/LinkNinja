@@ -73,7 +73,8 @@ public class UpdateServiceTest extends IntegrationTestsDatabase {
                 .longUrl("https://www.new-example.com")
                 .build();
 
-        assertThrows(UrlNotFoundException.class, () -> updateService.update(updateRequest, "test-user"));
+        UrlNotFoundException exception = assertThrows(UrlNotFoundException.class, () -> updateService.update(updateRequest, "test-user"));
+        assertEquals("Url not found", exception.getMessage());
         verify(urlService).findUrlEntityByShortUrl(eq("short-url"));
     }
 
